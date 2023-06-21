@@ -1,3 +1,4 @@
+git submodule update --init
 python setup.py sdist
 pip install dist/*.tar.gz
 rm -rf dist

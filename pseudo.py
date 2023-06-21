@@ -18,6 +18,9 @@ def get_completion(messages):
 
 def start_sudo_session():
     sudo_lang = open("sudolang-llm-support/sudolang.sudo.md", "r").read()
+    if not sudo_lang:
+        console.print("Error: Could not load sudo language.")
+        return
     messages = [{"role": "system", "content": sudo_lang}]
     return messages
 
@@ -28,7 +31,7 @@ def get_sudo_program(file_path):
 
 
 def start(program_name):
-    console.print("Welcome to sudoLang-runner 🚀 enter `/help` for help or `/start` to run the program.")
+    console.print(f"running {program_name} using pseudo version 1.0 🚀 Enter `/help` for help or `/start` run the program.")
     while True:
         user_input = input(">: ")
         if user_input == "/start":
