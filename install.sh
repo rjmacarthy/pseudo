@@ -1,3 +1,4 @@
+#!/bin/bash
 git submodule update --init
 cp config.yaml.example config.yaml
 python setup.py sdist
