@@ -19,7 +19,7 @@ def get_completion(messages):
 def start_sudo_session():
     sudo_lang = open("sudolang-llm-support/sudolang.sudo.md", "r").read()
     if not sudo_lang:
-        console.print("Error: Could not load sudo language.")
+        console.print("Error: Could not load sudolang.")
         return
     messages = [{"role": "system", "content": sudo_lang}]
     return messages
