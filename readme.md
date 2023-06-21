@@ -1,6 +1,6 @@
 # pseudo
 
-A console application that helps you run [SudoLang](https://github.com/paralleldrive/sudolang-llm-support) programs easier using the OpenAI API.
+A console application that helps you run [SudoLang](https://github.com/paralleldrive/sudolang-llm-support) programs easily using the OpenAI API.
 
 ## Pre-requisites
 Set your `OPENAI_API_KEY` environment variable.
