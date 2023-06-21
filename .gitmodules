@@ -1,0 +1,3 @@
+[submodule "sudolang-llm-support"]
+	path = sudolang-llm-support
+	url = https://github.com/paralleldrive/sudolang-llm-support
