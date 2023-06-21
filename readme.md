@@ -6,7 +6,8 @@ pseudo is a console application which aims to make [SudoLang](https://github.com
 To install pseudo, run the following command:
 
 ```shell
-sh install.sh
+chmod +x install.sh
+./install.sh
 ```
 ## Usage
 
