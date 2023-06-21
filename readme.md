@@ -1,6 +1,6 @@
 # pseudo
 
-pseudo is a console application which aims to make [SudoLang](https://github.com/paralleldrive/sudolang-llm-support) prgorams easier using the OpenAI API.
+pseudo is a console application which aims to make [SudoLang](https://github.com/paralleldrive/sudolang-llm-support) programs easier to run using the OpenAI API.
 
 ## Installation
 To install pseudo, run the following command:
