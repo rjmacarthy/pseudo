@@ -1,4 +1,4 @@
-### pseudo
+# pseudo
 
 pseudo is a console application which aims to make [SudoLang](https://github.com/paralleldrive/sudolang-llm-support) prgorams easier using the OpenAI API.
 
