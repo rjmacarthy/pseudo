@@ -17,28 +17,12 @@ CodeReviewer {
     Example: "1. This code is hard to read, please add comments to explain what it does."
   }
 
-  function createUniqueId() : number {
-    return a unique id for a pull request using a counter
-    Example 1: 1
+  function review(unidiff: string) : string {
+    transcript = analyzeUniDiff(unidiff)
+    return transcript |> log:format=markdown |>
   }
 
-  function generateName(unidiff: string) : string {
-    return a name for a pull request using the unidiff as a guide
-    Example 1: "Add comments to explain what the code does"
-  }
-
-  function review(unidiff: string, prId: number) : string {
-    const pr = new PullRequest()
-    pr.id = createUniqueId()
-    pr.prId = prId
-    pr.transcript = analyzeUniDiff(unidiff)
-    pr.unidiff = unidiff
-    pr.name = generateName(unidiff)
-    this.pullRequests.set(pr.id, pr)
-    return pr.transcript |> log:format=markdown |>
-  }
-
-  /review [unidiff] [prId] => string - Review a pull request
+  /review [unidiff] => string - Review a pull request
   /help - List all commands and their usage breifly
 }
 
