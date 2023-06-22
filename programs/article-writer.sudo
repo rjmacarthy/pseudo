@@ -37,6 +37,7 @@ ArticleGenerator {
   /topic [topic] set the topic of the article generator
   /length [length] set the length of the article
   /generate [subtopic] generate the article with the topic
+  /help show this help message
 }
 
 echo("Please enter a topic for the article generator: ")
