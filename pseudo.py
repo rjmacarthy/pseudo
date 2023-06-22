@@ -41,6 +41,8 @@ def load(program_name):
         messages.append({"role": "user", "content": program})
         completion = get_completion(messages)
         console.print(f"Loaded program {program_name} successfully 🚀")
+        reply = completion["choices"][0]["message"]["content"]
+        console.print(Markdown(reply))
         while True:
             user_input = input("> ")
             messages.append({"role": "user", "content": user_input})
