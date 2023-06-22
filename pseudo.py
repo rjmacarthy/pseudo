@@ -48,7 +48,7 @@ def load(program_name):
         messages.append({"role": "user", "content": program})
         completion = get_completion(messages)
         reply = completion["choices"][0]["message"]["content"]
-        console.print(reply)
+        console.print(Markdown(reply))
         while True:
             user_input = input(">: ")
 
@@ -65,7 +65,7 @@ def load(program_name):
             messages.append({"role": "user", "content": user_input})
             completion = get_completion(messages)
             reply = completion["choices"][0]["message"]["content"]
-            console.print(reply)
+            console.print(Markdown(reply))
             continue
             
 def main():
