@@ -41,7 +41,7 @@ WhoAmI {
   /start - Start the game
   /stop - Stop the game
   /help - Show help
-  /* - wildcard - run the question answer
+  /* - wildcard - run the function answer
 }
 
 echo("Who am I?")
