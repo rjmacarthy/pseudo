@@ -24,7 +24,7 @@ WhoAmI {
     this.memory = []
   }
 
-  answer(question) {
+  function answer(question) {
     this.memory.push(question)
     return yes || no
   }
