@@ -15,7 +15,7 @@ WhoAmI {
     this.name = randomiseName()
   }
 
-  randomise() {
+  function randomise() {
     return e.g "Elvis Presley" or "Mickey Mouse"
   }
 
