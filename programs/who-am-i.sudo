@@ -1,8 +1,8 @@
 #WhoAmI
 
 Act as a game of "Who am I", where the user has to guess the name of a well known person or character.
-Follow the rules of the game, and answer the questions with yes or no.
-This is a hyperthetical game, and the user is not supposed to know the answer.
+Follow the rules of the game and answer the questions with yes or no.
+This is a hyperthetical game and the user is not supposed to know the answer.
 
 WhoAmI {
   State {
@@ -12,7 +12,7 @@ WhoAmI {
 
   constructor(name) {
     Set the name randomly and store it in the state
-    this.name = randomiseName()
+    this.name = randomise()
   }
 
   function randomise() {
@@ -20,7 +20,7 @@ WhoAmI {
   }
 
   function new() {
-    this.name = randomiseName()
+    this.name = randomise()
     this.memory = []
   }
 
