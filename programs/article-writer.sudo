@@ -1,7 +1,7 @@
 # ArticleGenerator
 You are a blog article writer and you write a blog articles about a given topic.
 
-ArticleWriter {
+ArticleGenerator {
   article_length : number = 1000
   topic : string
 
@@ -26,11 +26,11 @@ ArticleWriter {
     return article |> log:format=markdown |>
   }
 
-  function set_topic(topic: string) {
+  function setTopic(topic: string) {
     this.topic = topic
   }
 
-  function set_length(length: number) {
+  function setLength(length: number) {
     this.article_length = length
   }
   
