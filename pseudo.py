@@ -31,37 +31,18 @@ def get_sudo_program(file_path):
 
 
 def start(program_name):
-    console.print(f"running {program_name} using pseudo version 1.0 🚀 Enter `/help` for help or `/start` run the program.")
-    while True:
-        user_input = input(">: ")
-        if user_input == "/start":
-            load(program_name)
-        else:
-            console.print("Welcome to pseudo! Enter `/start` to run the program.")
-            continue
+    console.print(f"Loading {program_name} using pseudo version 1.0, Please wait...")
+    load(program_name)
     
 
 def load(program_name):
-        console.print(f"Loading {program_name}... please wait.")
         messages = start_sudo_session()
         program = get_sudo_program(program_name)
         messages.append({"role": "user", "content": program})
         completion = get_completion(messages)
-        reply = completion["choices"][0]["message"]["content"]
-        console.print(Markdown(reply))
+        console.print(f"Loaded program {program_name} successfully 🚀")
         while True:
-            user_input = input(">: ")
-
-            if user_input == "/restart":
-                start(program_name)
-
-            if user_input == "/quit":
-                break
-
-            if user_input == "/help":
-                console.print(
-                    Markdown("Enter `/help` to see this message, `/quit` to quit and `/restart` to restart.")
-                )
+            user_input = input("> ")
             messages.append({"role": "user", "content": user_input})
             completion = get_completion(messages)
             reply = completion["choices"][0]["message"]["content"]
