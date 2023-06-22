@@ -6,10 +6,9 @@ ArticleGenerator {
   topic : string
 
   State {
-    CreatedDate
-    Subject
-    Title
-    Body
+    subject
+    title
+    body
   }
 
   Constraints {
@@ -22,8 +21,10 @@ ArticleGenerator {
   }
 
   function generate(subtopic: string) {
-    article: string = A blog article about the subtopic with the topic of this.topic
-    return article |> log:format=markdown |>
+    title: string = The title of the article
+    body: string = An article about subtopic within the main topic
+    content: string = title + body
+    return content |> log:format=markdown |>
   }
 
   function setTopic(topic: string) {
